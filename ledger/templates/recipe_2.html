@@ -1,0 +1,17 @@
+<!-- ledger/templates/recipe_2.html -->
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>Recipe 2</title>
+</head>
+<body>
+    <h1>Recipe Book</h1>
+    <h2>{{name}}</h2>
+    <h3>Ingredients:</h3>
+  <ul>
+    {% for ingredient in ingredients %}
+        <li>{{ingredient.name}}, {{ingredient.quantity}}</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
