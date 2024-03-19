@@ -1,0 +1,17 @@
+<!-- ledger/templates/recipe_details.html -->
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>{{ recipe.name }} Recipe Details</title>
+</head>
+<body>
+    <h1>Recipe Book</h1>
+    <h2>{{ recipe.name }} Recipe Details</h2>
+    <h3>Ingredients:</h3>
+  <ul>
+    {% for recipeingredient in recipe.ingredients.all %}
+        <li>{{ recipeingredient.name }}, {{ recipeingredient.quantity }}, {{ recipeingredient.measurement}}</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
