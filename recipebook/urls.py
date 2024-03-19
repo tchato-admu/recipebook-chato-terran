@@ -21,4 +21,5 @@ urlpatterns = [
     path("ledger/recipe/", include("ledger.urls", namespace="ledger")),
     path("ledger/recipes/", include("ledger.urls", namespace="ledger")),
     path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls'))
 ]

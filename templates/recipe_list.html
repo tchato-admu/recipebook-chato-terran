@@ -1,16 +1,11 @@
-<!-- ledger/templates/recipe_list.html -->
-<!DOCTYPE html>
-<html lang="en-US">
-<head>
-    <title>Recipe List</title>
-</head>
-<body>
-    <h1>Recipe Book</h1>
+<!-- templates/recipe_list.html -->
+{% extends 'base.html' %}
+
+{% block content %}
     <h2>Recipe List</h2>
   <ol>
     {% for recipe in object_list %}
         <li><a href="{{ recipe.get_absolute_url }}">{{ recipe.name }}</a></li>
     {% endfor %}
   </ol>
-</body>
-</html>
+{% endblock %}
